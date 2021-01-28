@@ -16,16 +16,17 @@ const routes: Routes = [
         redirectTo: '/home',
         pathMatch: 'full',
       },
-    
-    
-    
+
       {
         path: '**', // significa que no hubo match
         component: PageNotFoundComponent, // tiene que ir ultimo siempre
-      },]
+      },
+    ],
+  },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
