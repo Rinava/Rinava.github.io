@@ -16,12 +16,17 @@ const routes: Routes = [
         redirectTo: '/home',
         pathMatch: 'full',
       },
-
       {
-        path: '**', // significa que no hubo match
-        component: PageNotFoundComponent, // tiene que ir ultimo siempre
+        path: 'home',
+        loadChildren: () =>
+          import('./home/home.module').then((m) => m.HomeModule),
+        // carga un modulo dinamicamente
       },
     ],
+  },
+  {
+    path: '**', // significa que no hubo match
+    component: PageNotFoundComponent, // tiene que ir ultimo siempre
   },
 ];
 

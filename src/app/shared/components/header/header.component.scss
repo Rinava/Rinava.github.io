@@ -1,6 +1,11 @@
-mat-toolbar{
+mat-toolbar {
   background-color: #658caf;
 }
+.stickyBar {
+  position: sticky;
+  top: 0;
+}
+
 .container {
   display: grid;
   grid-template-rows: 20% 60% 20%;
@@ -20,7 +25,6 @@ img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  
 }
 .profile {
   border-radius: 400px;
