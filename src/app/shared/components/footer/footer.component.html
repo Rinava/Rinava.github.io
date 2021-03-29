@@ -32,11 +32,9 @@
         >
           Required
         </mat-error>
-        <mat-error
-        *ngIf="emailForm.controls['emailField'].hasError('email')"
-      >
-        Invalid Email
-      </mat-error>
+        <mat-error *ngIf="emailForm.controls['emailField'].hasError('email')">
+          Invalid Email
+        </mat-error>
       </mat-form-field>
       <mat-form-field appearance="outline">
         <mat-label>Message</mat-label>
@@ -47,7 +45,15 @@
           Required
         </mat-error>
       </mat-form-field>
-      <button mat-flat-button color="primary" type="submit" >Send</button>
+      <button
+        class="btn-submit"
+        mat-flat-button
+        color="primary"
+        type="submit"
+        [disabled]="emailForm.invalid"
+      >
+        Send
+      </button>
     </form>
   </div>
 </div>
