@@ -1,44 +1,60 @@
-body{
+body {
   margin: 0;
 }
-h1{
+h1 {
   text-align: center;
-  font-family: 'Cinzel Decorative';
+  font-family: "Cinzel Decorative";
   margin: 0;
   font-size: 3.4rem;
   font-weight: bold;
 }
-.rainbow{
-  background-image: linear-gradient(90deg, hsl(284,91%,69%) 0%, hsl(284,91%,69%) 12.5%,hsl(329,91%,69%) 12.5%, hsl(329,91%,69%) 25%,hsl(14,91%,69%) 25%, hsl(14,91%,69%) 37.5%,hsl(59,91%,69%) 37.5%, hsl(59,91%,69%) 50%,hsl(104,91%,69%) 50%, hsl(104,91%,69%) 62.5%,hsl(149,91%,69%) 62.5%, hsl(149,91%,69%) 75%,hsl(194,91%,69%) 75%, hsl(194,91%,69%) 87.5%,hsl(239,91%,69%) 87.5%, hsl(239,91%,69%) 100%);
-  background-size:  100% 15%;
-   background-repeat: repeat-x;
-   background-position: left 0% bottom 10%;
+.rainbow {
+  background-image: linear-gradient(
+    90deg,
+    hsl(284, 91%, 69%) 0%,
+    hsl(284, 91%, 69%) 12.5%,
+    hsl(329, 91%, 69%) 12.5%,
+    hsl(329, 91%, 69%) 25%,
+    hsl(14, 91%, 69%) 25%,
+    hsl(14, 91%, 69%) 37.5%,
+    hsl(59, 91%, 69%) 37.5%,
+    hsl(59, 91%, 69%) 50%,
+    hsl(104, 91%, 69%) 50%,
+    hsl(104, 91%, 69%) 62.5%,
+    hsl(149, 91%, 69%) 62.5%,
+    hsl(149, 91%, 69%) 75%,
+    hsl(194, 91%, 69%) 75%,
+    hsl(194, 91%, 69%) 87.5%,
+    hsl(239, 91%, 69%) 87.5%,
+    hsl(239, 91%, 69%) 100%
+  );
+  background-size: 100% 15%;
+  background-repeat: repeat-x;
+  background-position: left 0% bottom 10%;
 }
-h2{
+h2 {
   text-align: center;
   font-size: 1.6rem;
-  font-family: 'Alex Brush';
+  font-family: "Alex Brush";
 }
-.cards-container{
+.cards-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 
   border: 10px;
-  border-color:lightskyblue;
+  border-color: lightskyblue;
   border-style: double;
-  margin:10px;
-  
+  margin: 10px;
 }
 .flip-card {
   background-color: transparent;
   width: 90%;
-  max-width:500px;
+  max-width: 500px;
   height: 300px;
-  perspective: 1000px; 
+  perspective: 1000px;
   margin: 20px;
   font-size: 2rem;
-    
 }
 
 /* This container is needed to position the front and back side */
@@ -49,7 +65,6 @@ h2{
   text-align: center;
   transition: transform 0.8s;
   transform-style: preserve-3d;
-  
 }
 
 /* Do an horizontal flip when you move the mouse over the flip box container */
@@ -58,13 +73,14 @@ h2{
 }
 
 /* Position the front and back side */
-.flip-card-front, .flip-card-back {
+.flip-card-front,
+.flip-card-back {
   display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
-   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    border: 1px solid #f1f1f1;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border: 1px solid #f1f1f1;
   width: 100%;
   height: 100%;
   -webkit-backface-visibility: hidden; /* Safari */
@@ -93,36 +109,45 @@ h2{
 .partial-border {
   margin: 20px;
   padding: 10px;
-  background: linear-gradient(white, white) bottom left/150px 2px, linear-gradient(white, white) bottom left/2px 100px, linear-gradient(white, white) top right/150px 2px, linear-gradient(white, white) top right/2px 100px;
+  background: linear-gradient(white, white) bottom left/150px 2px,
+    linear-gradient(white, white) bottom left/2px 100px,
+    linear-gradient(white, white) top right/150px 2px,
+    linear-gradient(white, white) top right/2px 100px;
   background-repeat: no-repeat;
-    display: flex;
+  display: flex;
   align-items: center;
   justify-content: center;
 }
 
-
-#card-1 .flip-card-back,#card-3 .flip-card-front, #card-5 .flip-card-back{
-  background-color:#A1FFF4;
+#card-1 .flip-card-back,
+#card-3 .flip-card-front,
+#card-5 .flip-card-back {
+  background-color: #a1fff4;
   color: #0085ba;
 }
-#card-1 .flip-card-front, #card-5 .flip-card-front{
-  background-color:#FFA1AC;
-  color:#a10033;
+#card-1 .flip-card-front,
+#card-5 .flip-card-front {
+  background-color: #ffa1ac;
+  color: #a10033;
 }
-#card-2 .flip-card-back,#card-4 .flip-card-front,#card-6 .flip-card-back {
-  background-color:#C5A1FF;
+#card-2 .flip-card-back,
+#card-4 .flip-card-front,
+#card-6 .flip-card-back {
+  background-color: #c5a1ff;
   color: #7c00d4;
 }
-#card-2 .flip-card-front,#card-4 .flip-card-back, #card-6 .flip-card-front{
-  background-color:#DBFFA1;
-  color:#548700;
+#card-2 .flip-card-front,
+#card-4 .flip-card-back,
+#card-6 .flip-card-front {
+  background-color: #dbffa1;
+  color: #548700;
 }
-#card-3 .flip-card-back{
-  background-color:#EEDA11;
-  color:#8f4e0a;
+#card-3 .flip-card-back {
+  background-color: #eeda11;
+  color: #8f4e0a;
 }
 
-h3{
+h3 {
   padding: 10px;
 }
 .container {
@@ -132,8 +157,8 @@ h3{
   place-items: center;
   background: #eee;
   border-radius: 20px;
-  margin:20px 30px 20px 20px;
-  
+  margin: 20px 30px 20px 20px;
+
   position: relative;
   background-clip: content-box;
   overflow: hidden;
@@ -141,7 +166,7 @@ h3{
 }
 
 .container::before {
-  content: '';
+  content: "";
   position: absolute;
   border-radius: 50%;
   width: max(100vh, 100vw);
@@ -149,13 +174,11 @@ h3{
   z-index: -1;
   background: conic-gradient(orange, yellow, green, cyan, blue, violet, orange);
   animation: spin 4000ms infinite linear;
-  
-  
 }
 
 @keyframes spin {
   from {
-    transform: rotate(0)
+    transform: rotate(0);
   }
   to {
     transform: rotate(1turn);
@@ -172,7 +195,7 @@ h3{
     animation-duration: 20000ms;
   }
 }
-img{
+img {
   border-radius: 10px;
   object-fit: cover;
   height: 100%;
@@ -180,41 +203,69 @@ img{
   margin: 10px;
 }
 
-.say-my-name{
+.say-my-name {
   margin-left: 20px;
-    background: linear-gradient(to right, #ef5350, #f48fb1, #7e57c2, #2196f3, #26c6da, #43a047, #eeff41, #f9a825, #ff5722);
+  background: linear-gradient(
+    to right,
+    #ef5350,
+    #f48fb1,
+    #7e57c2,
+    #2196f3,
+    #26c6da,
+    #43a047,
+    #eeff41,
+    #f9a825,
+    #ff5722
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: bold;
- font-family: "Sofia", sans-serif;
- text-align: center;
+  font-family: "Sofia", sans-serif;
+  text-align: center;
 }
 
-.say-my-name span{
+.say-my-name span {
   white-space: nowrap;
 }
 
-.nav-bar{
-background-color: #2196f3;
-font-size: 1rem;
- overflow: hidden;
+.nav-bar {
+  background-color: #2196f3;
+  font-size: 1rem;
+  overflow: hidden;
 }
-.nav-bar a{
-  font-weight:bold;
-  mix-blend-mode:hard-light;
+.nav-bar a {
+  font-weight: bold;
+  mix-blend-mode: hard-light;
   margin-right: 20px;
   display: inline-block;
   padding: 0.3rem;
   margin: 1em;
   text-decoration: none;
-  color:white;
-  background-image: linear-gradient(90deg, hsl(284,91%,69%) 0%, hsl(284,91%,69%) 12.5%,hsl(329,91%,69%) 12.5%, hsl(329,91%,69%) 25%,hsl(14,91%,69%) 25%, hsl(14,91%,69%) 37.5%,hsl(59,91%,69%) 37.5%, hsl(59,91%,69%) 50%,hsl(104,91%,69%) 50%, hsl(104,91%,69%) 62.5%,hsl(149,91%,69%) 62.5%, hsl(149,91%,69%) 75%,hsl(194,91%,69%) 75%, hsl(194,91%,69%) 87.5%,hsl(239,91%,69%) 87.5%, hsl(239,91%,69%) 100%);;
+  color: white;
+  background-image: linear-gradient(
+    90deg,
+    hsl(284, 91%, 69%) 0%,
+    hsl(284, 91%, 69%) 12.5%,
+    hsl(329, 91%, 69%) 12.5%,
+    hsl(329, 91%, 69%) 25%,
+    hsl(14, 91%, 69%) 25%,
+    hsl(14, 91%, 69%) 37.5%,
+    hsl(59, 91%, 69%) 37.5%,
+    hsl(59, 91%, 69%) 50%,
+    hsl(104, 91%, 69%) 50%,
+    hsl(104, 91%, 69%) 62.5%,
+    hsl(149, 91%, 69%) 62.5%,
+    hsl(149, 91%, 69%) 75%,
+    hsl(194, 91%, 69%) 75%,
+    hsl(194, 91%, 69%) 87.5%,
+    hsl(239, 91%, 69%) 87.5%,
+    hsl(239, 91%, 69%) 100%
+  );
   background-size: 0 5px, auto;
   background-repeat: no-repeat;
   background-position: center bottom;
-  transition: all .2s ease-out;
+  transition: all 0.2s ease-out;
   border-radius: 5px;
-  
 }
 a:hover {
   /* The following line makes the underline only as wide as the text */
@@ -222,8 +273,37 @@ a:hover {
   background-size: 100% 5px, auto;
 }
 
-.material-icons{
+.material-icons {
   position: relative;
   top: 5px;
-  right:2px;
+  right: 2px;
+}
+.center-container{
+  display: flex;
+  justify-content: center;
+}
+.img-shaking{
+  width: 15%;
+}
+.img-shaking:hover
+{
+  /* Start the shake animation and make the animation last for 0.5 seconds */
+  animation: shake 0.5s;
+
+  /* When the animation is finished, start again */
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
